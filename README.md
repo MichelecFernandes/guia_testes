@@ -1,16 +1,10 @@
-# login_exercicio
+# 📚 Guia de Testes
+## Descrição:
 
-A new Flutter project.
+Este projeto é um aplicativo multiplataforma desenvolvido em Flutter e Dart que demonstra a implementação de um fluxo completo de autenticação e gestão de sessão, seguido pela exibição de um guia de conteúdo estático.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+O projeto foi construído como um exercício prático para aplicar conceitos de:
+- Autenticação com Token (JWT).
+- Controle de Estado e Sessão.
+- Consumo de API.
+- Boas práticas de arquitetura e heterogeneidade (layout responsivo).
