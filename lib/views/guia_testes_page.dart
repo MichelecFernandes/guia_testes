@@ -20,11 +20,41 @@ class _GuiaTestesPageState extends State<GuiaTestesPage> {
       link: 'https://aws.amazon.com/pt/what-is/unit-testing/', 
       description: 'Testa funções isoladas de código para garantir que cada parte da sua lógica funcione corretamente.',
       courses: [
-        CourseLink(title: 'TDD em Flutter com BLoC', url: 'https://www.udemy.com/course/flutter-tdd-clean-architecture/'),
-        CourseLink(title: 'Dominando o Teste Unitário (JS)', url: 'https://www.udemy.com/course/javascript-testing-unit-functional-e2e/'),
-        CourseLink(title: 'Testes Unitários com JUnit', url: 'https://www.alura.com.br/curso-online-java-junit-testes-unitarios'),
+        CourseLink(title: 'Testes unitários com JUnit 5', url: 'https://www.udemy.com/course/testes-unitarios-junit5/'),
+        CourseLink(title: 'Curso de Teste Unitário: O que é teste unitário?', url: 'https://www.youtube.com/watch?v=3xeg-wXC1o8'),
+        CourseLink(title: 'Curso Node.js: testes unitários e de integração', url: 'https://www.alura.com.br/curso-online-nodejs-testes-unitarios-integracao?srsltid=AfmBOop_5dYffVLvNYxTEYFZUtia2Ip4jN-Jv_1-nhkaY7B5g9KTPb7Q'),
       ],
-    )
+    ),
+    GuideTopic(
+      title: 'Teste de Integração', 
+      link: 'https://www.ibm.com/br-pt/think/topics/integration-testing', 
+      description: 'Verifica a comunicação e o fluxo de dados entre diferentes módulos e serviços do sistema.',
+      courses: [
+        CourseLink(title: 'Integração Contínua com testes, utilizando Jenkins', url: 'https://www.cod3r.com.br/courses/integracao-continua-com-testes-utilizando-jenkins'),
+        CourseLink(title: 'Testes de Integração em Java', url: 'https://www.alura.com.br/curso-online-testes-integracao-java'),
+        CourseLink(title: 'Flutter: dominando testes de integração', url: 'https://www.alura.com.br/curso-online-flutter-dominando-testes-integracao'),
+      ],
+    ),
+    GuideTopic(
+      title: 'Teste de Carga', 
+      link: 'https://voidr.co/blog/teste-de-carga/', 
+      description: 'Avalia o desempenho e a estabilidade do sistema sob condições de alto volume de usuários ou dados.',
+      courses: [
+        CourseLink(title: 'Integração Contínua: Rollback e teste de carga', url: 'https://www.alura.com.br/curso-online-integracao-continua-rollback-teste-carga?srsltid=AfmBOopY93x34BGH9pF0ihhftX7HvkY276NxfNrInTuVTc_kRH4cMCSk'),
+        CourseLink(title: 'JMeter - Testes de performance', url: 'https://www.udemy.com/course/testes-de-performance-com-jmeter-basico-ao-avancado/'),
+        CourseLink(title: 'Teste de performance com K6', url: 'https://www.udemy.com/course/teste-de-performance-com-k6/?srsltid=AfmBOopxKlCqmniXFSKyy47tYLKKU4UcLkNaiNbNNsRGPF95riqA5n9w'),
+      ],
+    ),
+    GuideTopic(
+      title: 'Teste de E2E (End-to-End)', 
+      link: 'https://circleci.com/blog/what-is-end-to-end-testing/', 
+      description: 'Simula a jornada completa do usuário no aplicativo, garantindo que o fluxo de negócios funcione.',
+      courses: [
+        CourseLink(title: 'Introdução aos Testes End-to-End (E2E) com Cypress', url: 'https://www.dio.me/articles/introducao-aos-testes-end-to-end-e2e-com-cypress'),
+        CourseLink(title: 'Cypress: automatizando testes E2E', url: 'https://www.alura.com.br/curso-online-cypress-automatizando-testes-e2e?srsltid=AfmBOooADjLdOgBzns6ors8ZMx_aAXaiAYpAbtfWoCZp3yG2-Oltb1Sj'),
+        CourseLink(title: 'iOS: trabalhando testes E2E com Maestro', url: 'https://www.alura.com.br/curso-online-ios-trabalhando-testes-e2e-maestro?srsltid=AfmBOoqEfcBWLerbP5o0UG9yl_t2LviRNmsXcq4ZiYZ9AlWQqCpzyHGZ'),
+      ],
+    ),
   ];
 
   @override
