@@ -5,7 +5,7 @@ import 'package:login_exercicio/shared/app_theme.dart';
 import 'package:login_exercicio/views/home_page.dart';
 import 'package:login_exercicio/views/login_page.dart';
 import 'package:login_exercicio/views/splash_screen.dart';
-import 'package:login_exercicio/views/guia_testes_page.dart';
+import 'package:login_exercicio/views/guide_tests_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/home': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
-        '/guia': (context) => const GuiaTestesPage(),
+        '/guia': (context) => const GuideTestsPage(),
       },
     );
   }
