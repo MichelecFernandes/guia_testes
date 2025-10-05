@@ -15,10 +15,16 @@ class GuiaTestesPage extends StatefulWidget {
 class _GuiaTestesPageState extends State<GuiaTestesPage> {
 
   final List<GuideTopic> _guideTopics = [
-    GuideTopic(title: 'Testes Unitários', link: 'https://aws.amazon.com/pt/what-is/unit-testing/', description: 'Testa funções isoladas de código.'),
-    GuideTopic(title: 'Teste de Integração', link: 'https://www.ibm.com/br-pt/think/topics/integration-testing', description: 'Verifica a comunicação entre diferentes componentes.'),
-    GuideTopic(title: 'Teste de Carga', link: 'https://voidr.co/blog/teste-de-carga/', description: 'Avalia o desempenho sob condições de alto volume.'),
-    GuideTopic(title: 'Teste de E2E (End-to-End)', link: 'https://circleci.com/blog/what-is-end-to-end-testing/', description: 'Simula a jornada completa do usuário no aplicativo.'),
+    GuideTopic(
+      title: 'Testes Unitários', 
+      link: 'https://aws.amazon.com/pt/what-is/unit-testing/', 
+      description: 'Testa funções isoladas de código para garantir que cada parte da sua lógica funcione corretamente.',
+      courses: [
+        CourseLink(title: 'TDD em Flutter com BLoC', url: 'https://www.udemy.com/course/flutter-tdd-clean-architecture/'),
+        CourseLink(title: 'Dominando o Teste Unitário (JS)', url: 'https://www.udemy.com/course/javascript-testing-unit-functional-e2e/'),
+        CourseLink(title: 'Testes Unitários com JUnit', url: 'https://www.alura.com.br/curso-online-java-junit-testes-unitarios'),
+      ],
+    )
   ];
 
   @override
@@ -48,6 +54,7 @@ class _GuiaTestesPageState extends State<GuiaTestesPage> {
   Widget build(BuildContext context) {
     final user = context.watch<UserNotifier>().user;
     final userName = user?.firstName ?? 'Usuário';
+    final primaryColor = Theme.of(context).primaryColor;
 
     return Scaffold(
       appBar: AppBar(
@@ -68,7 +75,7 @@ class _GuiaTestesPageState extends State<GuiaTestesPage> {
             Text(
               'Bem-vindo(a), $userName!',
               style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                color: Theme.of(context).primaryColor,
+                color: primaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -78,7 +85,6 @@ class _GuiaTestesPageState extends State<GuiaTestesPage> {
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 16),
-           
             Expanded(
               child: ListView.builder(
                 itemCount: _guideTopics.length,
@@ -90,19 +96,75 @@ class _GuiaTestesPageState extends State<GuiaTestesPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: ListTile(
-                      contentPadding: const EdgeInsets.all(15),
-                      title: Text(
-                        item.title,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          InkWell(
+                            onTap: () => _launchUrl(item.link),
+                            borderRadius: BorderRadius.circular(8),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 4.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      item.title,
+                                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                        color: primaryColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  const Icon(Icons.link, size: 20, color: Colors.grey),
+                                ],
+                              ),
+                            ),
+                          ),
+                          const Divider(),
+                          Text(
+                            item.description,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            'Sugestões de Cursos:',
+                            style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).hintColor,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          ...item.courses.map((course) => Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: InkWell(
+                              onTap: () => _launchUrl(course.url),
+                              borderRadius: BorderRadius.circular(8),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 4.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.school, size: 18, color: primaryColor),
+                                    const SizedBox(width: 8),
+                                    Expanded(
+                                      child: Text(
+                                        course.title,
+                                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                          decoration: TextDecoration.underline,
+                                          color: primaryColor,
+                                        ),
+                                      ),
+                                    ),
+                                    const Icon(Icons.arrow_forward_ios, size: 14, color: Colors.grey),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )).toList(),
+                        ],
                       ),
-                      subtitle: Text(
-                        item.description,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      trailing: const Icon(Icons.open_in_new),
-                      onTap: () => _launchUrl(item.link),
                     ),
                   );
                 },
