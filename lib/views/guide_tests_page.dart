@@ -132,10 +132,11 @@ class _GuideTestsPageState extends State<GuideTestsPage> {
   Widget build(BuildContext context) {
     final user = context.watch<UserNotifier>().user;
     final userName = user?.firstName ?? 'Usuário';
-    final primaryColor = Theme.of(context).primaryColor;
+    final primaryColor = const Color.fromARGB(255, 2, 45, 80);
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 2, 45, 80),
         title: const Text('Guia de Testes de Software'),
         actions: [
           IconButton(

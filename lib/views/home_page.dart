@@ -18,10 +18,10 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Icon(
-                    Icons.lightbulb,
-                    size: 100,
-                    color: Theme.of(context).primaryColor,
+                Image.asset(
+                    'assets/app_icon.png', 
+                    height: 100, 
+                    width: 100, 
                   ),
                   Text(
                     AppConstants.appName,
