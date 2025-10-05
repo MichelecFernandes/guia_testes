@@ -1,12 +1,19 @@
 
 import 'package:flutter/material.dart';
+import 'package:login_exercicio/providers/user_notifier.dart';
 import 'package:login_exercicio/shared/app_constants.dart';
 import 'package:login_exercicio/shared/app_theme.dart';
 import 'package:login_exercicio/views/home_page.dart';
-import 'package:login_exercicio/views/login_page.dart';
+import 'package:login_exercicio/views/splash_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => UserNotifier(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -20,10 +27,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
-        '/login': (context) => LoginPage()
+        '/': (context) => const SplashScreen(),
+        '/home': (context) => const HomePage()
       },
     );
   }
 }
-
