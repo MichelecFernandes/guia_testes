@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_exercicio/shared/app_constants.dart';
-import 'package:login_exercicio/components/app_button.dart';
+import 'package:guia_testes/shared/app_constants.dart';
+import 'package:guia_testes/components/app_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

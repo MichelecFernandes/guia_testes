@@ -1,6 +1,6 @@
 {
-    "name": "login_exercicio",
-    "short_name": "login_exercicio",
+    "name": "guia_testes",
+    "short_name": "guia_testes",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

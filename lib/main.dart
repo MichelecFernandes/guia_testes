@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:login_exercicio/providers/user_notifier.dart';
-import 'package:login_exercicio/shared/app_constants.dart';
-import 'package:login_exercicio/shared/app_theme.dart';
-import 'package:login_exercicio/views/home_page.dart';
-import 'package:login_exercicio/views/login_page.dart';
-import 'package:login_exercicio/views/splash_screen.dart';
-import 'package:login_exercicio/views/guide_tests_page.dart';
+import 'package:guia_testes/providers/user_notifier.dart';
+import 'package:guia_testes/shared/app_constants.dart';
+import 'package:guia_testes/shared/app_theme.dart';
+import 'package:guia_testes/views/home_page.dart';
+import 'package:guia_testes/views/login_page.dart';
+import 'package:guia_testes/views/splash_screen.dart';
+import 'package:guia_testes/views/guide_tests_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {

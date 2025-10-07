@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_exercicio/models/guide_topic.dart';
-import 'package:login_exercicio/providers/user_notifier.dart';
-import 'package:login_exercicio/controllers/auth_controller.dart';
+import 'package:guia_testes/models/guide_topic.dart';
+import 'package:guia_testes/providers/user_notifier.dart';
+import 'package:guia_testes/controllers/auth_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 

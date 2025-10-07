@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:jwt_decoder/jwt_decoder.dart';
-import 'package:login_exercicio/shared/app_constants.dart';
+import 'package:guia_testes/shared/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController {

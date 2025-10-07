@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_exercicio/shared/app_constants.dart';
-import 'package:login_exercicio/components/custom_text_field.dart';
-import 'package:login_exercicio/components/app_button.dart';
-import 'package:login_exercicio/components/custom_snack_bar.dart';
-import 'package:login_exercicio/controllers/auth_controller.dart';
-import 'package:login_exercicio/providers/user_notifier.dart';
+import 'package:guia_testes/shared/app_constants.dart';
+import 'package:guia_testes/components/custom_text_field.dart';
+import 'package:guia_testes/components/app_button.dart';
+import 'package:guia_testes/components/custom_snack_bar.dart';
+import 'package:guia_testes/controllers/auth_controller.dart';
+import 'package:guia_testes/providers/user_notifier.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
